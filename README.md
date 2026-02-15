@@ -70,9 +70,9 @@ The evaluation suite (`eval/evaluate.py`) tests three metrics across question co
 
 Recall measures what fraction of expected source sections appear in the retrieved chunks. The high threshold of 0.8 ensures the retriever consistently finds the right section for straightforward factual questions. Medium questions often span multiple sections or require cross-paper retrieval, so the threshold is relaxed to 0.6 — finding at least some relevant context is sufficient for the LLM to synthesize an answer.
 
-### Precision (high >= 0.2)
+### Precision (high >= 0.2, medium >= 0.2)
 
-Precision measures what fraction of retrieved chunks match an expected section. The threshold is deliberately low at 0.2 because the retriever returns `TOP_K=5` chunks per query, but most questions only have 1-2 relevant sections in a corpus of 20 chunks. Even with perfect retrieval, average precision tops out around 0.33 for this dataset. The 0.2 threshold catches cases where the retriever returns entirely irrelevant chunks while accepting the expected noise from a small corpus.
+Precision measures what fraction of retrieved chunks match an expected section. The threshold is deliberately low at 0.2 for both high and medium confidence because the retriever returns `TOP_K=5` chunks per query, but most questions only have 1-2 relevant sections in a corpus of 20 chunks. Even with perfect retrieval, average precision tops out around 0.33 for this dataset. The 0.2 threshold catches cases where the retriever returns entirely irrelevant chunks while accepting the expected noise from a small corpus. Medium questions use the same threshold since they also expect 1-2 sections and face the same mathematical ceiling.
 
 ### Faithfulness (high >= 0.8, medium >= 0.6, low >= 0.6)
 
