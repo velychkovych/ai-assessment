@@ -1,0 +1,87 @@
+[
+  {
+    "question": "What BLEU score did the Transformer achieve on the WMT 2014 English-to-German translation task?",
+    "expected_answer": "The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task.",
+    "expected_chunks": [
+      {"source": "attention_is_all_you_need.md", "section": "Attention Is All You Need"},
+      {"source": "attention_is_all_you_need.md", "section": "Training and Impact"}
+    ],
+    "confidence": "high"
+  },
+  {
+    "question": "By how much can LoRA reduce the number of trainable parameters compared to full fine-tuning of GPT-3 175B?",
+    "expected_answer": "LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times compared to GPT-3 175B fine-tuned with Adam.",
+    "expected_chunks": [
+      {"source": "lora.md", "section": "LoRA: Low-Rank Adaptation of Large Language Models"},
+      {"source": "lora.md", "section": "Results and Comparisons"}
+    ],
+    "confidence": "high"
+  },
+  {
+    "question": "What GLUE score did BERT achieve?",
+    "expected_answer": "BERT pushed the GLUE score to 80.5%, a 7.7% point absolute improvement.",
+    "expected_chunks": [
+      {"source": "bert.md", "section": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"},
+      {"source": "bert.md", "section": "Fine-tuning and Results"}
+    ],
+    "confidence": "high"
+  },
+  {
+    "question": "What top-5 error rate did the winning entry achieve in ILSVRC-2012?",
+    "expected_answer": "The winning entry achieved a top-5 test error rate of 15.3%, compared to 26.2% by the second-best entry.",
+    "expected_chunks": [
+      {"source": "imagenet_classification.md", "section": "ImageNet Classification with Deep Convolutional Neural Networks"},
+      {"source": "imagenet_classification.md", "section": "Training and Impact"}
+    ],
+    "confidence": "high"
+  },
+  {
+    "question": "What are the default hyperparameter values for the Adam optimizer?",
+    "expected_answer": "The default values are β1 = 0.9, β2 = 0.999, and ε = 10^-8.",
+    "expected_chunks": [
+      {"source": "adam.md", "section": "Algorithm"}
+    ],
+    "confidence": "high"
+  },
+  {
+    "question": "What pre-training tasks does BERT use?",
+    "expected_answer": "BERT uses two pre-training tasks: Masked Language Modeling (MLM), where 15% of tokens are randomly masked and predicted from context, and Next Sentence Prediction (NSP), where the model predicts whether two sentences are consecutive.",
+    "expected_chunks": [
+      {"source": "bert.md", "section": "Pre-training Objectives"}
+    ],
+    "confidence": "high"
+  },
+  {
+    "question": "How does the Transformer architecture differ from RNN-based models in terms of parallelization?",
+    "expected_answer": "The Transformer processes all positions in parallel using attention mechanisms, whereas RNNs process tokens sequentially. This makes the Transformer more parallelizable and significantly faster to train.",
+    "expected_chunks": [
+      {"source": "attention_is_all_you_need.md", "section": "Attention Is All You Need"},
+      {"source": "attention_is_all_you_need.md", "section": "Training and Impact"}
+    ],
+    "confidence": "medium"
+  },
+  {
+    "question": "How does dropout in the ImageNet CNN relate to the LoRA approach for reducing overfitting?",
+    "expected_answer": "The documents discuss dropout as a regularization method used in the ImageNet CNN and LoRA as a parameter-efficient fine-tuning method, but they do not directly compare these two techniques.",
+    "expected_chunks": [
+      {"source": "imagenet_classification.md", "section": "Key Technical Contributions"},
+      {"source": "lora.md", "section": "Method"}
+    ],
+    "confidence": "medium"
+  },
+  {
+    "question": "How do Adam and AdaGrad differ in their handling of learning rates over time?",
+    "expected_answer": "AdaGrad accumulates all past squared gradients, causing the effective learning rate to shrink monotonically. Adam uses exponential moving averages instead, preventing this monotonic decay and making it suitable for non-stationary and non-convex problems.",
+    "expected_chunks": [
+      {"source": "adam.md", "section": "Relation to Other Optimizers"},
+      {"source": "adam.md", "section": "Algorithm"}
+    ],
+    "confidence": "medium"
+  },
+  {
+    "question": "What is the current stock price of companies that use the Adam optimizer?",
+    "expected_answer": "This information is not contained in the documents and requires real-time external data.",
+    "expected_chunks": [],
+    "confidence": "low"
+  }
+]
